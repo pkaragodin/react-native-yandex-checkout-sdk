@@ -173,29 +173,6 @@ public class RNYandexCheckoutSdkModule extends ReactContextBaseJavaModule {
     Checkout.detach();
   }
 
-  @NonNull
-  private static Set<PaymentMethodType> getPaymentMethodTypes(Settings settings) {
-    final Set<PaymentMethodType> paymentMethodTypes = new HashSet<>();
-
-    if (settings.isYandexMoneyAllowed()) {
-      paymentMethodTypes.add(PaymentMethodType.YANDEX_MONEY);
-    }
-
-    if (settings.isNewCardAllowed()) {
-      paymentMethodTypes.add(PaymentMethodType.BANK_CARD);
-    }
-
-    if (settings.isSberbankOnlineAllowed()) {
-      paymentMethodTypes.add(PaymentMethodType.SBERBANK);
-    }
-
-    if (settings.isGooglePayAllowed()) {
-      paymentMethodTypes.add(PaymentMethodType.GOOGLE_PAY);
-    }
-
-    return paymentMethodTypes;
-  }
-
 
   @Override
   public String getName() {
